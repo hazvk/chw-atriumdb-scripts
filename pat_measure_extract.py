@@ -13,6 +13,7 @@
 # NOTE: when you extract the zip, the files in it will be named like:
 # pat_measure_extract.<MRN>.<encounter_time_min>-<encounter_time_max>.csv
 # That way, you can use only the data for the time frame that is relevant to you.
+# NOTE: ensure you SFTP the zip file to your local machine once done
 ###############################
 
 
@@ -105,5 +106,6 @@ logger.info(f"Folder zipped to {folder_path}.zip")
 shutil.rmtree(folder_path)
 
 logger.info(f"Now log back onto Windows machine, log into SFTP shell and run `get BDSP/{folder_path}.zip` to download the file.")
+logger.info(f"For more info, see https://nswhealth.sharepoint.com/:w:/r/sites/BigDataforSmallPeople-SCHN/Shared%20Documents/General/BDSP%20Data%20Export%20Tutorial.docx?d=w42728ee5f3f24b3cb726eae94d51a858&csf=1&web=1&e=4TSqrN&nav=eyJoIjoiMzgxNjE4OTU2In0")
 
 logger.info("Done.")
