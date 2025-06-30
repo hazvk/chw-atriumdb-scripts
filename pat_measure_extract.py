@@ -14,6 +14,8 @@
 # pat_measure_extract.<MRN>.<encounter_time_min>-<encounter_time_max>.csv
 # That way, you can use only the data for the time frame that is relevant to you.
 # NOTE: ensure you SFTP the zip file to your local machine once done
+# NOTE: these are massive files, like 300mb worth. Just using CSVs now to 
+# enable your work whilst you get more of a handle on using AtriumDB. So use cautiously and make sure you clean up your files when you're done, especially on the server.
 ###############################
 
 
