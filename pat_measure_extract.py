@@ -70,7 +70,7 @@ all_patient_measure_data = []
 
 logger.info(f"Extracting data for MRN {mrn} with measures: {', '.join([measure[1] for measure in relevant_measures])}")
 for measure in relevant_measures:
-    data = local_prod_sdk.get_data(mrn=int(mrn), start_time_n=0, end_time_n=1743043334 * 10**9, measure_id=measure[0])
+    data = local_prod_sdk.get_data(mrn=int(mrn), start_time_n=0, end_time_n=datetime.datetime.now().timestamp() * 10**9, measure_id=measure[0])
     data_df = pd.DataFrame({'mrn': mrn, 'epoch':data[1], f'{measure[1]}_epoch':data[1], f'{measure[1]}_value':data[2]})
     data_df['epoch'] = data_df['epoch'].astype('float64')
     all_patient_measure_data.append(data_df)
